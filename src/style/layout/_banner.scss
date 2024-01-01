@@ -1,0 +1,31 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: relative;
+    border-radius: 25px;
+    margin: 0 100px;
+    max-width: 1240px;
+    
+    height: 225px;
+    &::before {
+        content:"";
+        background-image: url(../../../public/img/banner-home.png);
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        border-radius: 25px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.65;
+    }
+    &__header {
+        position: relative;
+        color: white;
+        font-size: 48px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,28 @@
+@import "../variables/variables";
+
+
+.header {
+    margin: 0 100px;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 0;
+    &__navlinks {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 57px;
+        & a {
+            text-decoration: none;
+        }
+    }
+}
+
+.navlinks {
+    &__link{
+        color: $primary;
+        font-size: 1.5em;
+    }
+}
