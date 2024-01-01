@@ -1,0 +1,15 @@
+@import "../variables/variables";
+
+.card-container {
+    background-color: $bg-primary;
+    width: fit-content;
+    height: fit-content;
+    max-width: 1240px;
+    margin:0 100px 43px 100px;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px
+}

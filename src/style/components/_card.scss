@@ -1,0 +1,18 @@
+@import "../variables/variables";
+
+.card {
+    background: $grd-primary;
+    background-color: $primary;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    &__title {
+        width: 100px;
+        color: white;
+        line-height: 150%;
+    }
+
+}
