@@ -4,8 +4,12 @@
 @import "./layout/header",
         "./layout/footer";
 
+@import "./pages/error",
+        "./pages/about";
+
 @import "./components/banner",
         "./components/card-container",
-        "./components/card";
+        "./components/card",
+        "./components/dropdown";
 
 
