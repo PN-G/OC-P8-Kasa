@@ -2,6 +2,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Dropdown from "../components/Dropdown";
+import data from "../data/about.json";
 
 const About = () => {
   return (
@@ -9,14 +10,14 @@ const About = () => {
       <Navigation />
       <Banner />
       <main className="about-main">
-        <Dropdown />
-        <Dropdown />
-        <Dropdown />
-        <Dropdown />
+        {data.map((about, index) => (
+          <Dropdown key={index} dropdownInfo={about} />
+        ))}
       </main>
       <Footer />
     </div>
   );
+  
 };
 
 export default About;
