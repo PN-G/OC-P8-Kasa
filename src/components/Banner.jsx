@@ -1,7 +1,9 @@
-const Banner = () => {
+const Banner = (props) => {
+  const { imgUrl, headline } = props
   return (
     <div className="banner">
-      <h1 className="banner__header">Chez vous, partout et ailleurs</h1>
+      <img src={'./img/'+imgUrl} alt="" className="banner__img" />
+      <h1 className="banner__header">{headline}</h1>
     </div>
   );
 };

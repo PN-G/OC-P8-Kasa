@@ -3,11 +3,12 @@
 .card {
     background: $grd-primary;
     background-color: $primary;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
+    text-align:left;
     align-items: flex-end;
     &__title {
         color: white;

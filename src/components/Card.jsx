@@ -1,4 +1,3 @@
-
 function Card ({ logement }) {
     return (
         <div className="card">

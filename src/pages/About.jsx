@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <Navigation />
-      <Banner />
+      <Banner imgUrl={"banner-about.png"} headline={""}/>
       <main className="about-main">
         {data.map((about, index) => (
           <Dropdown key={index} dropdownInfo={about} />
