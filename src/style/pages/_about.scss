@@ -1,9 +1,9 @@
+@import "../abstracts/mixins";
+
 .about-main {
-    height: fit-content;
-    width: 70%;
+    @include flex-column;
+    gap: 30px;
+    @include box(70%, fit-content);
     max-width: 1040px;   
     margin:0 15% 40px 15%;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
 }

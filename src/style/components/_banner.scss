@@ -1,31 +1,31 @@
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    position: relative;
-    border-radius: 25px;
-    margin:0 9% 40px 9%;
-    max-width: 1240px;
-    
-    height: 225px;
-    &__img {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        object-fit: cover;
-        border-radius: 25px;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 0.75;
+@import "../abstracts/mixins";
 
-    }
-    &__header {
-        position: relative;
-        color: white;
-        font-size: 48px;
-        text-align: center;
-    }
+.banner {
+  @include flex-row;
+  @include box(80%, 225px);
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  position: relative;
+  border-radius: 25px;
+  margin: 0 10% 40px 10%;
+  max-width: 1240px;
+
+  &__img {
+    @include box(100%);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  &__header {
+    position: relative;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+  }
 }

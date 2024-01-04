@@ -1,12 +1,13 @@
+@import "../abstracts/mixins";
+
+
 .footer {
-  margin:0;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: flex-end;
   align-items: center;
   gap: 29px;
+  @include box(100%, 160px);
+  margin:0;
   padding-bottom: 29px;
   background-color: black;
   &__logo {

@@ -1,19 +1,18 @@
-@import "../variables/variables";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 
 .header {
-    max-width: 1240px;
-    padding: 45px 0;
-    margin:0 9%;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: space-between;
     align-items: center;
+    max-width: 1240px;
+    padding: 45px 0;
+    margin:0 10%;
     &__navlinks {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         gap: 57px;
+        list-style-type: none;
         & a {
             text-decoration: none;
         }

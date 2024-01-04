@@ -1,7 +1,7 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Banner from "../components/Banner";
-import Dropdown from "../components/Dropdown";
+import Collapse from "../components/Collapse";
 import data from "../data/about.json";
 
 const About = () => {
@@ -11,7 +11,7 @@ const About = () => {
       <Banner imgUrl={"banner-about.png"} headline={""}/>
       <main className="about-main">
         {data.map((about, index) => (
-          <Dropdown key={index} dropdownInfo={about} />
+          <Collapse key={index} collapseInfo={about} />
         ))}
       </main>
       <Footer />
