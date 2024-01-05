@@ -2,8 +2,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
 import CardContainer from '../components/CardContainer';
+import { useEffect } from 'react';
 
 const Home = () => {
+    useEffect(() => {
+        document.title = `Kasa - Accueil`;
+        []
+      });
+
     return (
         <div>
             <Navigation />

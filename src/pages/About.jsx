@@ -3,8 +3,14 @@ import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import data from "../data/about.json";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    document.title = `Kasa - A propos`;
+    []
+  });
+
   return (
     <div>
       <Navigation />

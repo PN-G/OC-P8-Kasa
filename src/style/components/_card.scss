@@ -4,6 +4,7 @@
 .card {
     @include flex-row;
     @include box(300px);
+    position: relative;
     margin: 20px;
     background: $grd-primary;
     background-color: $primary;
@@ -11,7 +12,18 @@
     padding: 20px;
     text-align:left;
     align-items: flex-end;
+    &__picture {
+        @include box(100%);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
     &__title {
+        z-index: 3;
         color: white;
         line-height: 150%;
     }
