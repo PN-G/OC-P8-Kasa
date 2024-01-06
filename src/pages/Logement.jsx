@@ -28,9 +28,9 @@ const Logement = () => {
     <div>
       <Navigation />
       <Carrousel logement={currentId}/>
-      <main className="logement__main">
+      <main className="logement">
         {currentId.map((content) => (
-          <div key="logement-main-container">
+          <div key="logement-main-container" className="logement__main">
             <div key="header-container" className="logement__header">
               <h1 key={content.title} className="logement__title">
                 {content.title}

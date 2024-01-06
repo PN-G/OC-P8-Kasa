@@ -1,0 +1,19 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.rating {
+  @include flex-row;
+  gap: 12px;
+  &__star {
+    @include box(25px);
+    & path {
+      height: 40px;
+      fill: $secondary;
+    }
+    &--colored {
+      & path {
+        fill: $primary;
+      }
+    }
+  }
+}

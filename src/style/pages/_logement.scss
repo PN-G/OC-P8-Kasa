@@ -1,0 +1,67 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.logement {
+    @include box(80%, 100%);
+    max-width: 1240px;
+    margin: 0 10%;
+    &__main {
+        @include flex-row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include box(100%);
+    }
+    &__header {
+        color: $primary;
+        width: 50%;
+        margin-top: 30px;
+    }
+    &__title {
+        font-size: 36px;
+    }
+    &__host {
+        @include flex-row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        width: 50%;
+        margin-top: 24px;
+        & .host__name {
+            color: $primary;
+            @include box(100px, 50px);
+            text-align: right;
+            padding-top: 10px;
+        }
+        & .host__picture {
+            @include box(65px);
+            border-radius: 50%;
+        }
+    }
+    &__tags {
+        width: 70%;
+        @include flex-row;
+        gap: 10px;
+        margin-top: 26px;
+        margin-bottom: 26px;
+        & .tag {
+            background-color: $primary;
+            color: white;
+            padding: 3px 30px;
+            border-radius: 10px;
+        }
+    }
+    &__rating {
+        width: 30%;
+        height: fit-content;
+        @include flex-row;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    &__collapse {
+        width: 100%;
+        @include flex-row;
+        gap: 76px;
+        margin-bottom: 50px;
+    }
+
+}

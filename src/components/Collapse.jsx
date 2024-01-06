@@ -9,10 +9,10 @@ const Collapse = ({collapseHeader, collapseInfo}) => {
         <img
           src="../icons/arrow.svg"
           alt="fleche"
-          className="collapse__arrow"
+          className={`collapse__arrow ${isOpen ? "collapse__arrow--opened" : ""}`}
         />
       </div>
-      <div className={`menu ${isOpen ? "collapse__content" : "collapse__content--closed"}`}>
+      <div className={`${isOpen ? "collapse__content" : "collapse__content--closed"}`}>
         <p className="collapse__text">{collapseInfo}</p>
       </div>
     </div>

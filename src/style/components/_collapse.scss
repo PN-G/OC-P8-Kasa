@@ -14,8 +14,10 @@
         font-size: 24px;
         color: white;
     }
-    &__arrow--open {
-        transform: rotate(-180deg);
+    &__arrow {
+        &--opened {
+            transform: rotate(-180deg);
+        }
     }
     &__content {
         position: relative;

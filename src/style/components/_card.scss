@@ -3,7 +3,7 @@
 
 .card {
     @include flex-row;
-    @include box(300px);
+    @include box(270px);
     position: relative;
     margin: 20px;
     background: $grd-primary;
