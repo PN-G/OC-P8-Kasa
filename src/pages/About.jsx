@@ -17,7 +17,7 @@ const About = () => {
       <Banner imgUrl={"banner-about.png"} headline={""}/>
       <main className="about-main">
         {data.map((about, index) => (
-          <Collapse key={index} collapseInfo={about} />
+          <Collapse key={index} collapseHeader={about.title} collapseInfo={about.content} />
         ))}
       </main>
       <Footer />
