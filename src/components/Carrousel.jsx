@@ -32,16 +32,16 @@ const Carrousel = ({ logement }) => {
       <img
         src="../icons/arrow.svg"
         alt="fleche de gauche"
-        className="carrousel__arrow carrousel__arrow--left"
+        className={`${pictures.length < 2 ? "arrow_hidden" : "carrousel__arrow carrousel__arrow--left"}`}
         onClick={handlePrevPicture}
       />
       <img
         src="../icons/arrow.svg"
         alt="fleche de droite"
-        className="carrousel__arrow carrousel__arrow--right"
+        className={`${pictures.length < 2 ? "arrow_hidden" : "carrousel__arrow carrousel__arrow--right"}`}
         onClick={handleNextPicture}
       />
-      <p className="carrousel__info">
+      <p className={`${pictures.length < 2 ? "carrousel__info--hidden" : "carrousel__info"}`}>
         {currentPictureId + 1}/{pictures.length}
       </p>
     </div>

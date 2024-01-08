@@ -1,34 +1,55 @@
 @import "../abstracts/mixins";
 
 .collapse {
-    width: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  &__header {
+    @include flex-row;
+    height: 50px;
+    background-color: $primary;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 24px;
+    color: white;
+  }
+  &__arrow {
+    transition: transform 0.3s;
+    &--opened {
+      transform: rotate(-180deg);
+    }
+  }
+  &__content {
     position: relative;
-    &__header {
-        @include flex-row;
-        height: 50px;
-        background-color: $primary;
-        border-radius: 5px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        font-size: 24px;
-        color: white;
+    top: -10px;
+    z-index: -1;
+    background-color: $bg-primary;
+    border-radius: 0 0 5px 5px;
+    padding: 30px 20px 20px 20px;
+    color: $primary;
+    animation: content-appearing 200ms forwards ease-in-out;
+    &--closed {
+        animation: content-disappearing 200ms forwards ease-in-out;
     }
-    &__arrow {
-        &--opened {
-            transform: rotate(-180deg);
-        }
-    }
-    &__content {
-        position: relative;
-        top: -10px;
-        z-index: -1;
-        background-color: $bg-primary;
-        border-radius: 0 0 5px 5px;
-        padding: 30px 20px 20px 20px;
-        color: $primary;
-        &--closed {
-            display: none;
-        }
-    }
+  }
+}
+
+@keyframes content-appearing {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes content-disappearing {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200px);
+  }
 }

@@ -2,35 +2,41 @@
 @import "../abstracts/mixins";
 
 .carrousel {
+  position: relative;
+  @include box(80%, 415px);
+  max-width: 1240px;
+  margin: 0 10%;
+  &__picture {
     position: relative;
-    @include box(80%, 415px);
-    max-width: 1240px;
-    margin: 0 10%;
-    &__picture {
-        position: relative;
-        @include box(100%);
-        object-fit: cover;
+    @include box(100%);
+    object-fit: cover;
+  }
+  &__arrow {
+    position: absolute;
+    @include box(79px, 50px);
+    object-fit: cover;
+    &--left {
+      left: 0;
+      bottom: 170px;
+      transform: rotate(-90deg);
     }
-    &__arrow {
-        position: absolute;
-        @include box(79px, 50px);
-        object-fit: cover;
-        &--left {
-            left: 0;
-            bottom: 170px;
-            transform: rotate(-90deg)
-        }
     &--right {
-        right: 0;
-        bottom: 170px;
-        transform: rotate(90deg)
+      right: 0;
+      bottom: 170px;
+      transform: rotate(90deg);
     }
+    &__hidden {
+        display: none;
     }
-    &__info {
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        bottom: 25px;
-        color: white;
+  }
+  &__info {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 25px;
+    color: white;
+    &--hidden {
+        display: none;
     }
+  }
 }
