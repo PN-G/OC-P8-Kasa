@@ -3,9 +3,8 @@
 
 .card {
     @include flex-row;
-    @include box(270px);
+    @include box(300px);
     position: relative;
-    margin: 20px;
     background: $grd-primary;
     background-color: $primary;
     border-radius: 10px;
@@ -16,9 +15,8 @@
         @include box(100%);
         position: absolute;
         top: 0px;
-        right: 0px;
-        bottom: 0px;
         left: 0px;
+        filter: brightness(80%);
         object-fit: cover;
         border-radius: 5px;
     }

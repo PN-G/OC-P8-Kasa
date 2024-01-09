@@ -8,8 +8,7 @@ import { useEffect } from "react";
 const About = () => {
   useEffect(() => {
     document.title = `Kasa - A propos`;
-    []
-  });
+  },[]);
 
   return (
     <div>

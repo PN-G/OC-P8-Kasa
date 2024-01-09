@@ -7,13 +7,17 @@
   max-width: 1240px;
   margin: 0 10%;
   &__picture {
-    position: relative;
+    position: absolute;
     @include box(100%);
     object-fit: cover;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   &__arrow {
     position: absolute;
     @include box(79px, 50px);
+    z-index: 3;
     object-fit: cover;
     &--left {
       left: 0;
@@ -39,4 +43,11 @@
         display: none;
     }
   }
+}
+
+@media only screen and (width >= 1640px) {
+  .carrousel {
+      width: 75%;
+      margin-left: 17%;
+  } 
 }

@@ -7,8 +7,7 @@ import { useEffect } from 'react';
 const Home = () => {
     useEffect(() => {
         document.title = `Kasa - Accueil`;
-        []
-      });
+    },[]);
 
     return (
         <div>

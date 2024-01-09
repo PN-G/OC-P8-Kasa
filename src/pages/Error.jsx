@@ -6,8 +6,7 @@ import { useEffect } from "react";
 const Error = () => {
   useEffect(() => {
     document.title = `Kasa - Erreur 404`;
-    []
-  });
+  },[]);
 
   return (
     <div>

@@ -1,34 +1,30 @@
 import { useState } from "react";
 
 const Carrousel = ({ logement }) => {
-  const pictures = logement[0].pictures;
+  const pictures = logement.pictures;
   const [currentPictureId, setCurrentPictureId] = useState(0);
   const currentPicture = pictures[currentPictureId];
 
   const handlePrevPicture = () => {
-    if (currentPictureId === 0) {
-        setCurrentPictureId(pictures.length - 1);
-      } else {
-          setCurrentPictureId(currentPictureId - 1);
-      }
+    setTimeout (() => {
+      setCurrentPictureId(currentPictureId === 0 ? pictures.length - 1 : currentPictureId - 1);
+    },300)
   };
 
   const handleNextPicture = () => {
-    if (currentPictureId === pictures.length -1) {
-        setCurrentPictureId(0);
-      } else {
-        setCurrentPictureId(currentPictureId + 1);
-      }
+    setTimeout (() => {
+    setCurrentPictureId(currentPictureId === pictures.length -1 ? 0 : currentPictureId + 1);
+  },300)
   };
 
   return (
     <div className="carrousel">
       <img
-        key={currentPicture}
-        src={currentPicture}
-        alt="photo"
-        className="carrousel__picture"
-      />
+      key={currentPicture}
+      src={currentPicture}
+      alt="photo"
+      className="carrousel__picture"
+    />
       <img
         src="../icons/arrow.svg"
         alt="fleche de gauche"

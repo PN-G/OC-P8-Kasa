@@ -2,7 +2,7 @@
 
 .banner {
   @include flex-row;
-  @include box(80%, 225px);
+  @include box(100%, 225px);
   align-items: center;
   justify-content: center;
   background-color: black;
@@ -28,4 +28,11 @@
     font-size: 48px;
     text-align: center;
   }
+}
+
+@media only screen and (width >= 1640px) {
+  .banner {
+      width: 75%;
+      margin-left: 17%;
+  } 
 }

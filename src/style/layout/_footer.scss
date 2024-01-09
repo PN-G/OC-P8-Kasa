@@ -23,3 +23,10 @@
     color: white;
   }
 }
+
+@media only screen and (width >= 1640px) {
+  .footer {
+      width: 90%;
+      margin-left: 7%;
+  } 
+}

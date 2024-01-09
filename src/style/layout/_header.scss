@@ -25,3 +25,10 @@
         font-size: 1.5em;
     }
 }
+
+@media only screen and (width >= 1640px) {
+    .header {
+        width: 75%;
+        margin-left: 17%;
+    } 
+  }

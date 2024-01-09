@@ -7,3 +7,10 @@
     max-width: 1040px;   
     margin:0 15% 40px 15%;
 }
+
+@media only screen and (width >= 1640px) {
+    .about-main {
+        width: 60%;
+        margin-left: 22%;
+    } 
+  }
