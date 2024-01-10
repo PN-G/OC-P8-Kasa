@@ -5,7 +5,7 @@
   @include flex-row;
   max-width: 1140px;
   flex-flow: wrap;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   background-color: $bg-primary;
   margin: 0 10% 40px 10%;
   border-radius: 25px;
@@ -15,8 +15,9 @@
 
 @media only screen and (width >= $largerscreens) {
   .card-container {
-    width: 75%;
+    width: 70%;
     margin-left: 15%;
+    gap: 50px;
   }
 }
 
