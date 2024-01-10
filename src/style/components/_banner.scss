@@ -1,8 +1,9 @@
+@import "../abstracts/variables";
 @import "../abstracts/mixins";
 
 .banner {
   @include flex-row;
-  @include box(100%, 225px);
+  @include box(80%, 225px);
   align-items: center;
   justify-content: center;
   background-color: black;
@@ -30,9 +31,33 @@
   }
 }
 
-@media only screen and (width >= 1640px) {
+@media only screen and (width >= $largerscreens) {
   .banner {
-      width: 75%;
-      margin-left: 17%;
-  } 
+    width: 75%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (width <= $tablet) {
+  .banner {
+    width: 96%;
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .banner {
+    margin-top: 27px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0;
+    @include box(88%, 111px);
+    justify-content: flex-start;
+    padding-left: 16px;
+    &__header {
+      width: 65%;
+      text-align: left;
+      font-size: 24px;
+    }
+  }
 }

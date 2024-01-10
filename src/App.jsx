@@ -1,8 +1,8 @@
-import {BrowserRouter, Routes, Route } from "react-router-dom";
-import "./style/index.scss"
-import Home from './pages/Home';
-import About from './pages/About';
-import Error from './pages/Error';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./style/index.scss";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Error from "./pages/Error";
 import Logement from "./pages/Logement";
 
 const App = () => {

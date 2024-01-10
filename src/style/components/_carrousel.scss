@@ -6,10 +6,12 @@
   @include box(80%, 415px);
   max-width: 1240px;
   margin: 0 10%;
+  border-radius: 10px;
   &__picture {
     position: absolute;
     @include box(100%);
     object-fit: cover;
+    border-radius: 10px;
     top: 0;
     left: 0;
     right: 0;
@@ -30,7 +32,7 @@
       transform: rotate(90deg);
     }
     &__hidden {
-        display: none;
+      display: none;
     }
   }
   &__info {
@@ -40,14 +42,28 @@
     bottom: 25px;
     color: white;
     &--hidden {
-        display: none;
+      display: none;
     }
   }
 }
 
-@media only screen and (width >= 1640px) {
+@media only screen and (width <= $mobile) {
   .carrousel {
-      width: 75%;
-      margin-left: 17%;
-  } 
+    @include box(90%, 255px);
+    margin: 27px 5% 0 5%;
+    &__arrow {
+      @include box(30px);
+      bottom: 45%;
+    }
+    &__info {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (width >= $largerscreens) {
+  .carrousel {
+    width: 75%;
+    margin-left: 17%;
+  }
 }

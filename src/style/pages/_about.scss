@@ -1,16 +1,26 @@
+@import "../abstracts/variables";
 @import "../abstracts/mixins";
 
 .about-main {
-    @include flex-column;
-    gap: 30px;
-    @include box(70%, fit-content);
-    max-width: 1040px;   
-    margin:0 15% 40px 15%;
+  @include flex-column;
+  gap: 30px;
+  @include box(70%, fit-content);
+  margin: 0 15% 40px 15%;
 }
 
-@media only screen and (width >= 1640px) {
-    .about-main {
-        width: 60%;
-        margin-left: 22%;
-    } 
+@media only screen and (width <= $mobile) {
+  .about-main {
+    width: 90%;
+    margin: 0 5%;
+    padding: 19px 0;
+    gap: 20px;
   }
+}
+
+@media only screen and (width >= $largerscreens) {
+  .about-main {
+    width: 55%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}

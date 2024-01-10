@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.host {
+  &__name {
+    color: $primary;
+    @include box(100px, 50px);
+    text-align: right;
+    padding-top: 10px;
+  }
+  &__picture {
+    @include box(65px);
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .host {
+    &__name {
+      @include box(93px, 33px);
+      text-align: right;
+      font-size: 12px;
+    }
+    &__picture {
+      @include box(40px);
+      border-radius: 50%;
+    }
+  }
+}

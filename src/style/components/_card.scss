@@ -2,28 +2,39 @@
 @import "../abstracts/mixins";
 
 .card {
-    @include flex-row;
-    @include box(300px);
-    position: relative;
-    background: $grd-primary;
-    background-color: $primary;
-    border-radius: 10px;
-    padding: 20px;
-    text-align:left;
-    align-items: flex-end;
-    &__picture {
-        @include box(100%);
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        filter: brightness(80%);
-        object-fit: cover;
-        border-radius: 5px;
-    }
-    &__title {
-        z-index: 3;
-        color: white;
-        line-height: 150%;
-    }
+  @include flex-row;
+  @include box(300px);
+  position: relative;
+  background: $grd-primary;
+  background-color: $primary;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  align-items: flex-end;
+  &__picture {
+    @include box(100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    filter: brightness(80%);
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  &__title {
+    z-index: 3;
+    color: white;
+    line-height: 150%;
+  }
+}
 
+@media only screen and (width <= $tablet) {
+  .card {
+    @include box(295px);
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .card {
+    @include box(295px, 215px);
+  }
 }

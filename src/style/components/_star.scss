@@ -17,3 +17,21 @@
     }
   }
 }
+
+@media only screen and (width <= $mobile) {
+  .rating {
+    gap: 7px;
+    &__star {
+      @include box(15px);
+      & path {
+        height: 40px;
+        fill: $secondary;
+      }
+      &--colored {
+        & path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}

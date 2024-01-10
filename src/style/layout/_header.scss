@@ -1,34 +1,72 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-
 .header {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1240px;
+  padding: 45px 0;
+  margin: 0 10%;
+  &__navlinks {
     @include flex-row;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1240px;
-    padding: 45px 0;
-    margin:0 10%;
-    &__navlinks {
-        @include flex-row;
-        gap: 57px;
-        list-style-type: none;
-        & a {
-            text-decoration: none;
-        }
+    gap: 57px;
+    list-style-type: none;
+    & a {
+      text-decoration: none;
     }
+  }
 }
 
 .navlinks {
-    &__link{
-        color: $primary;
-        font-size: 1.5em;
+  &__link {
+    color: $primary;
+    font-size: 24px;
+    &:hover {
+      border-bottom: 1px solid $primary;
     }
+    &--active {
+      border-bottom: 1px solid $primary;
+    }
+  }
 }
 
-@media only screen and (width >= 1640px) {
-    .header {
-        width: 75%;
-        margin-left: 17%;
-    } 
+@media only screen and (width >= $largerscreens) {
+  .header {
+    width: 75%;
+    margin-left: 15%;
   }
+}
+
+@media only screen and (width <= $tablet) {
+  .header {
+    width: 96%;
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .header {
+    padding: 20px 0 0 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    @include box(88%, 47px);
+    &__logo {
+      & svg {
+        height: 47px;
+        width: 145px;
+      }
+    }
+    &__navlinks {
+      gap: 26px;
+    }
+  }
+
+  .navlinks {
+    &__link {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+}

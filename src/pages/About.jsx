@@ -8,21 +8,24 @@ import { useEffect } from "react";
 const About = () => {
   useEffect(() => {
     document.title = `Kasa - A propos`;
-  },[]);
+  }, []);
 
   return (
     <div>
       <Navigation />
-      <Banner imgUrl={"banner-about.png"} headline={""}/>
+      <Banner imgUrl={"banner-about.png"} headline={""} />
       <main className="about-main">
         {data.map((about, index) => (
-          <Collapse key={index} collapseHeader={about.title} collapseInfo={about.content} />
+          <Collapse
+            key={index}
+            collapseHeader={about.title}
+            collapseInfo={about.content}
+          />
         ))}
       </main>
       <Footer />
     </div>
   );
-  
 };
 
 export default About;

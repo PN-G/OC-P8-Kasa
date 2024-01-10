@@ -1,8 +1,17 @@
 // Couleurs
-$primary: #FF6060;
-$secondary: #E3E3E3;
-$bg-primary: #F6F6F6;
-$grd-primary: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+$primary: #ff6060;
+$secondary: #e3e3e3;
+$bg-primary: #f6f6f6;
+$grd-primary: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(0, 0, 0, 0.5) 100%
+);
 
 // Polices
-$main-font: 'Montserrat', sans-serif;
+$main-font: "Montserrat", sans-serif;
+
+//Media Queries
+$mobile: 768px;
+$tablet: 1024px;
+$largerscreens: 1201px;

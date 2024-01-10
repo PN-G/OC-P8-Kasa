@@ -13,9 +13,28 @@
   gap: 50px 60px;
 }
 
-@media only screen and (width >= 1640px) {
+@media only screen and (width >= $largerscreens) {
   .card-container {
     width: 75%;
-    margin-left: 17%;
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (width <= $tablet) {
+  .card-container {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 40px;
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .card-container {
+    background-color: white;
+    margin: 0;
+    padding: 27px 5%;
+    gap: 20px;
+    justify-content: center;
   }
 }

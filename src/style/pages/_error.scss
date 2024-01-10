@@ -2,21 +2,41 @@
 @import "../abstracts/mixins";
 
 .error-message {
-    @include flex-column;
+  @include flex-column;
+  color: $primary;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 100px;
+  &__title {
+    font-size: 280px;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-size: 28px;
+  }
+  &__link {
     color: $primary;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 100px;
+    text-decoration: underline;
+    text-decoration-color: $primary;
+  }
+}
+
+@media only screen and (width <= $mobile) {
+  .error-message {
+    gap: 113px;
+    margin-top: 113px;
+    margin-bottom: 113px;
     &__title {
-        font-size: 280px;
-        font-weight: 700;
+      font-size: 96px;
+      font-weight: 700;
     }
     &__subtitle {
-        font-size: 28px;
+      font-size: 18px;
+      width: 260px;
+      text-align: center;
     }
     &__link {
-        color: $primary;
-        text-decoration: underline;
-        text-decoration-color: $primary;
+      font-size: 14px;
     }
+  }
 }

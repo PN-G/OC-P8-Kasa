@@ -19,6 +19,8 @@ const Logement = () => {
   if (findId === undefined) {
     return <Error />;
   } else {
+    const hostName = findId.host.name.split(" ");
+
     return (
       <div>
         <Navigation />
@@ -31,27 +33,31 @@ const Logement = () => {
               <p key={findId.location} className="logement__location">
                 {findId.location}
               </p>
+              <div key="tags-container" className="logement__tags">
+                {findId.tags.map((tag, index) => (
+                  <div key={index} className="tag">
+                    {tag}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div key="host-container" className="logement__host">
-              <p key={findId.host.name} className="host__name">
-                {findId.host.name}
-              </p>
-              <img
-                key={findId.host.picture}
-                src={findId.host.picture}
-                alt={findId.host.name}
-                className="host__picture"
-              />
-            </div>
-            <div key="tags-container" className="logement__tags">
-              {findId.tags.map((tag, index) => (
-                <div key={index} className="tag">
-                  {tag}
-                </div>
-              ))}
-            </div>
-            <div key="rating-container" className="logement__rating">
-              <RatingStars logementRating={findId.rating} />
+            <div className="logement__host-and-rating">
+              <div key="host-container" className="logement__host">
+                <p key={findId.host.name} className="host__name">
+                  {hostName[0]}
+                  <br />
+                  {hostName[1]}
+                </p>
+                <img
+                  key={findId.host.picture}
+                  src={findId.host.picture}
+                  alt={findId.host.name}
+                  className="host__picture"
+                />
+              </div>
+              <div key="rating-container" className="logement__rating">
+                <RatingStars logementRating={findId.rating} />
+              </div>
             </div>
             <div key="collapse-container" className="logement__collapse">
               <Collapse

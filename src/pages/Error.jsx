@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const Error = () => {
   useEffect(() => {
     document.title = `Kasa - Erreur 404`;
-  },[]);
+  }, []);
 
   return (
     <div>
@@ -17,7 +17,9 @@ const Error = () => {
           Oups! La page que vous demandez n&apos;existe pas.
         </h2>
         <NavLink to="/">
-          <p className="error-message__link">Retourner sur la page d&apos;accueil</p>
+          <p className="error-message__link">
+            Retourner sur la page d&apos;accueil
+          </p>
         </NavLink>
       </div>
       <Footer />

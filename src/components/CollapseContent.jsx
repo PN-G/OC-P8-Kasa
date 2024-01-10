@@ -1,7 +1,6 @@
 function CollapseContent({ text, status, openingState }) {
-
-if (status === false && openingState === false) {
-      return null;
+  if (status === false && openingState === false) {
+    return null;
   } else {
     return (
       <div
