@@ -6,19 +6,15 @@ const Carrousel = ({ logement }) => {
   const currentPicture = pictures[currentPictureId];
 
   const handlePrevPicture = () => {
-    setTimeout(() => {
-      setCurrentPictureId(
-        currentPictureId === 0 ? pictures.length - 1 : currentPictureId - 1
-      );
-    }, 300);
+    setCurrentPictureId(
+      currentPictureId === 0 ? pictures.length - 1 : currentPictureId - 1
+    );
   };
 
   const handleNextPicture = () => {
-    setTimeout(() => {
-      setCurrentPictureId(
-        currentPictureId === pictures.length - 1 ? 0 : currentPictureId + 1
-      );
-    }, 300);
+    setCurrentPictureId(
+      currentPictureId === pictures.length - 1 ? 0 : currentPictureId + 1
+    );
   };
 
   return (

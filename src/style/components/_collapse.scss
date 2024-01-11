@@ -7,6 +7,8 @@
   overflow: hidden;
   border-radius: 5px;
   &__header {
+    position: relative;
+    z-index: 2;
     @include flex-row;
     height: 50px;
     background-color: $primary;
@@ -24,35 +26,32 @@
     }
   }
   &__content {
-    position: relative;
-    top: -10px;
-    z-index: -1;
+    height: fit-content;
+    transform: translateY(0px) scaleY(100%);
+    transform-origin: top;
+    transition: all 300ms ease-in-out;
     background-color: $bg-primary;
     border-radius: 0 0 5px 5px;
-    padding: 30px 20px 20px 20px;
+    padding: 20px;
     color: $primary;
-    animation: content-appearing 200ms forwards ease-in-out;
     &--closed {
-      animation: content-disappearing 200ms forwards ease-in-out;
+      padding: 0;
+      transform: translateY(-50px) scaleY(0);
+      transition: all 300ms;
     }
   }
-}
-
-@keyframes content-appearing {
-  from {
-    transform: translateY(-200px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes content-disappearing {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-200px);
+  &__text {
+    visibility: visible;
+    height: 100%;
+    transform-origin: top;
+    transform: scaleY(100%);
+    transition: all 300ms ease-in-out;
+    &--hidden {
+      height: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+      transition: all 300ms ease-in-out;
+    }
   }
 }
 
@@ -75,7 +74,10 @@
     }
     &__content {
       font-size: 13px;
-      padding: 20px 15px 15px 15px;
+      padding: 15px;
+      &--closed {
+        padding: 0;
+      }
     }
   }
 }

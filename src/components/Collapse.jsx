@@ -3,13 +3,9 @@ import CollapseContent from "./CollapseContent";
 
 const Collapse = ({ collapseHeader, collapseInfo }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [openingState, setOpeningState] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
-    setTimeout(() => {
-      setOpeningState(!openingState);
-    }, 300);
   };
 
   return (
@@ -27,7 +23,6 @@ const Collapse = ({ collapseHeader, collapseInfo }) => {
       <CollapseContent
         text={collapseInfo}
         status={isOpen}
-        openingState={openingState}
       />
     </div>
   );

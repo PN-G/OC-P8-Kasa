@@ -1,26 +1,29 @@
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import data from "../data/logements.json";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import RatingStars from "../components/RatingStars";
-import Error from "./Error";
 
 const Logement = () => {
   const id = useParams();
   const findId = data.find((logement) => logement.id === id.logementId);
+  const navigate = useNavigate();
+  const [idExists, setIdExists] = useState(false);
 
   useEffect(() => {
-    document.title = `Kasa - Logement ${id.logementId}`;
-  }, [id.logementId]);
+    if (findId === undefined) {
+      navigate("/error");
+    } else {
+      setIdExists(true);
+      document.title = `Kasa - Logement ${findId.id}`;
+    }
+  }, [findId, navigate]);
 
-  if (findId === undefined) {
-    return <Error />;
-  } else {
+  if (idExists) {
     const hostName = findId.host.name.split(" ");
-
     return (
       <div>
         <Navigation />
