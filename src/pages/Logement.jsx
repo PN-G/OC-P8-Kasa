@@ -14,7 +14,7 @@ const Logement = () => {
   const [idExists, setIdExists] = useState(false);
 
   useEffect(() => {
-    if (findId === undefined) {
+    if (!findId) {
       navigate("/error");
     } else {
       setIdExists(true);
