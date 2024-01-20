@@ -3,20 +3,24 @@
 
 .tag {
   height: 25px;
+  width: fit-content;
   @include flex-row;
   align-items: center;
   justify-content: center;
-  //text-align: center;
   background-color: $primary;
   color: white;
-  padding: 3px 29px;
+  padding: 3px 25px;
   border-radius: 10px;
+  &__text {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (width <= $mobile) {
   .tag {
     height: 18px;
-    padding: 3px 30px;
     font-size: 10px;
   }
 }

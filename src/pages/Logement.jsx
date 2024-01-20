@@ -39,7 +39,7 @@ const Logement = () => {
               <div key="tags-container" className="logement__tags">
                 {findId.tags.map((tag, index) => (
                   <div key={index} className="tag">
-                    {tag}
+                    <p className="tag__text">{tag}</p> 
                   </div>
                 ))}
               </div>
