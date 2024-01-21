@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import RatingStars from "../components/RatingStars";
+import HostCard from "../components/HostCard";
+import Tag from "../components/Tag";
 
 const Logement = () => {
   const id = useParams();
@@ -23,7 +25,6 @@ const Logement = () => {
   }, [findId, navigate]);
 
   if (idExists) {
-    const hostName = findId.host.name.split(" ");
     return (
       <div>
         <Navigation />
@@ -38,26 +39,12 @@ const Logement = () => {
               </p>
               <div key="tags-container" className="logement__tags">
                 {findId.tags.map((tag, index) => (
-                  <div key={index} className="tag">
-                    <p className="tag__text">{tag}</p> 
-                  </div>
+                  <Tag key={index} tag={tag} />
                 ))}
               </div>
             </div>
             <div className="logement__host-and-rating">
-              <div key="host-container" className="logement__host">
-                <p key={findId.host.name} className="host__name">
-                  {hostName[0]}
-                  <br />
-                  {hostName[1]}
-                </p>
-                <img
-                  key={findId.host.picture}
-                  src={findId.host.picture}
-                  alt={findId.host.name}
-                  className="host__picture"
-                />
-              </div>
+              <HostCard hostName={findId.host.name} hostPicture={findId.host.picture} />
               <div key="rating-container" className="logement__rating">
                 <RatingStars logementRating={findId.rating} />
               </div>

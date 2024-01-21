@@ -4,9 +4,6 @@ const RatingStars = ({ logementRating }) => {
   return (
     <div className="rating">
       {stars.map((star) => (
-        // <img
-        //   src="../icons/star-solid.svg"
-        //   alt="icone étoile"
         <svg
           key={star}
           className={
